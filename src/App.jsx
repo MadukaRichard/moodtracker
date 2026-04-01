@@ -1,14 +1,22 @@
-import React, { Component } from 'react'
-import { Routes, Route, Router } from 'react-router-dom'
-import Carousel from './components/Carousel'
-import Signin from './pages/Signin'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Carousel from './components/Carousel';
+import Signin from './pages/Signin';
+import Dashboardwidget from './components/Dashboardwidget';
+import Dashboardwidget2 from './components/Dashboardwidget2';
+import Dashboardwidget3 from './components/Dashboardwidget3';
+
 const App = () => {
   return (
       <Routes>
         <Route path="/" element={<Carousel />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/dashboard" element={<Dashboardwidget />} />
+        <Route path="/dashboard/step2" element={<Dashboardwidget2 />} />
+        <Route path="/dashboard/step3" element={<Dashboardwidget3 />} />
       </Routes>
 
-  )
-}
-export default App
+  );
+};
+
+export default App;

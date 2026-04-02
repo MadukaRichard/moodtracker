@@ -1,12 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { FiArrowLeft } from "react-icons/fi";
-const Arrownavcomponent = () => {
-  return (
-    <div className="flex justify-between items-center">
-  <FiArrowLeft size={24} />
-  <p>Skip</p>
-</div>
-  )
-}
+import { useNavigate } from 'react-router-dom';
 
-export default Arrownavcomponent
+const Arrownavcomponent = ({ className }) => {
+  const navigate = useNavigate();
+  return (
+    <div className={`flex justify-between items-center ${className || ''}`}>
+      <button onClick={() => navigate(-1)} aria-label="Go back">
+        <FiArrowLeft size={24} />
+      </button>
+      <button className="text-sm text-gray-500 hover:text-gray-700 transition-colors">Skip</button>
+    </div>
+  );
+};
+
+export default Arrownavcomponent;

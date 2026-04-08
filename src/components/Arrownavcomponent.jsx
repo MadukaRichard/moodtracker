@@ -9,7 +9,12 @@ const Arrownavcomponent = ({ className }) => {
       <button onClick={() => navigate(-1)} aria-label="Go back">
         <FiArrowLeft size={24} />
       </button>
-      <button className="text-sm text-gray-500 hover:text-gray-700 transition-colors">Skip</button>
+      <button
+        onClick={() => navigate('/dashboard')}
+        className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+      >
+        Skip
+      </button>
     </div>
   );
 };

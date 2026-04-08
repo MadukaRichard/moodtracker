@@ -146,7 +146,7 @@ const Dashboardwidget = () => {
             {/* Continue Button */}
             <button
               disabled={!selectedAge}
-              onClick={() => navigate('/dashboard/step2')}
+              onClick={() => navigate('/onboarding/gender')}
               className={`
                 group relative bg-[#4c55b6] text-white px-8 py-4 rounded-xl font-semibold
                 transition-all duration-200 w-full flex items-center justify-center gap-3

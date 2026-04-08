@@ -32,7 +32,7 @@ const Dashboardwidget2 = () => {
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (isDesktop && selectedGender && e.key === 'Enter') {
-        navigate('/dashboard/step3');
+        navigate('/onboarding/interests');
       }
     };
     window.addEventListener('keydown', handleKeyPress);
@@ -194,7 +194,7 @@ const Dashboardwidget2 = () => {
             {/* Continue Button */}
             <button
               disabled={!selectedGender}
-              onClick={() => navigate('/dashboard/step3')}
+              onClick={() => navigate('/onboarding/interests')}
               className={`
                 group relative bg-[#4c55b6] text-white px-8 py-4 rounded-xl font-semibold
                 transition-all duration-200 w-full flex items-center justify-center gap-3

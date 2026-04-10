@@ -6,10 +6,11 @@
   import { GiMeditation } from "react-icons/gi";
   import { RiMentalHealthLine, RiSparklingLine } from "react-icons/ri";
   import { GrLinkNext } from "react-icons/gr";
-  import { FaCheckCircle } from "react-icons/fa";
+  import { FaCheckCircle, FaUserFriends } from "react-icons/fa";
 
   const goalOptions = [
     { value: 'track-moods', label: 'Track Moods', category: 'MOOD', icon: BsEmojiSmile, color: 'hover:bg-yellow-50', borderColor: 'hover:border-yellow-400' },
+    { value: 'find-moodmate', label: 'Find MoodMate', category: 'FRIENDS', icon: FaUserFriends, color: 'hover:bg-rose-50', borderColor: 'hover:border-rose-400' },
     { value: 'manage-stress', label: 'Manage Stress', category: 'WELLNESS', icon: MdSelfImprovement, color: 'hover:bg-green-50', borderColor: 'hover:border-green-400' },
     { value: 'daily-motivation', label: 'Daily Motivation', category: 'SPIRIT', icon: GiMeditation, color: 'hover:bg-purple-50', borderColor: 'hover:border-purple-400' },
     { value: 'talk-therapist', label: 'Talk to a Therapist', category: 'SUPPORT', icon: RiMentalHealthLine, color: 'hover:bg-blue-50', borderColor: 'hover:border-blue-400' },
@@ -241,7 +242,7 @@
               {/* Continue Button */}
               <button
                 disabled={selectedGoals.length === 0}
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/dashboard')}
                 className={`
                   group relative bg-[#4c55b6] text-white px-8 py-4 rounded-xl font-semibold
                   transition-all duration-200 w-full flex items-center justify-center gap-3
